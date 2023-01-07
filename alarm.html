@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alarm clock</title>
+    <style>
+        *{
+            color: rgb(115, 255, 20); 
+        }
+        html{
+            height: 100%;
+            width: 100%;
+            margin:0;
+        }
+        body{
+            min-width: 100%;
+            min-height: 100%;
+            background-color: black;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-row-gap: 3px;
+            /* grid-template-rows: 213px repeat(1000,70px); */
+        }
+        .lab{
+            background-color: rgb(0, 0, 0);
+            color: rgb(115, 255, 20);
+            box-shadow: 0px 0px 2px 0px;
+            padding: 4px;
+            border-radius: 8px;
+            font-size: 60px;
+            vertical-align: middle;
+        }
+        .alarms{
+            width: fit-content;
+            border-radius: 9px;
+            padding: 4px;
+            background-color: #0003;
+            color: #73ff14;
+            box-shadow: 0px 0px 2px 0px;
+        }
+        button{
+            border: none;
+            background-color: rgba(0, 0, 0, 0.2);
+            outline: none;
+            border-radius: 6px;
+            padding: 5px;
+            box-shadow: 0px 0px 3px 0px;
+            margin-left: 13px;
+        }
+        input{
+            border:none;
+            background-color: black
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+        <div id="ui">
+            <label class="lab"></label>
+            <button onclick="setAlarm()">Add Alarm</button></br></br></br>
+        </div>
+    </br>
+    </div>
+    <script src="./alarmclock.js"></script>
+  </body>
+</html>
