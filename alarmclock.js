@@ -61,6 +61,7 @@ function add() {
             audio.pause();
           });
           document.getElementById(this.id).remove();
+          document.getElementsByClassName(this.id)[0].remove();
           alarm.splice(this.id, 1);
           clearInterval(i);
         }
@@ -77,5 +78,8 @@ function add() {
   div.classList.add("alarms");
   let main = document.getElementById("main");
   main.append(div);
-  main.append(document.createElement("br"));
+  let _br = document.createElement("br");
+  _br.classList.add(alarm[0]["id"].toString());
+  _br.id = "br" + alarm[0]["id"].toString();
+  main.append(_br);
 }
