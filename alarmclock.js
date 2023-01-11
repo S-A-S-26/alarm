@@ -55,14 +55,11 @@ function add() {
         console.log(time_in_min() >= this.settime);
         if (time_in_min() >= this.settime) {
           let audio = new Audio("./The Next Episode - YouTube.MP3");
-          // audio.play()
           let prom = audio.play();
           prom.then(() => {
             alert(`alarm : ${this.exact}`);
             audio.pause();
           });
-          alert(`alarm : ${this.exact}`);
-          audio.pause();
           document.getElementById(this.id).remove();
           alarm.splice(this.id, 1);
           clearInterval(i);
